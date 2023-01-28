@@ -1,0 +1,32 @@
+#home-pg1 {
+  min-height: calc(100vh - clamp(3vh, 50px, 10vh));
+  background: rgb(81, 228, 130);
+  background: linear-gradient(
+    135deg,
+    rgba(81, 228, 130, 1) 0%,
+    rgba(33, 187, 194, 1) 47%,
+    rgba(62, 106, 130, 1) 100%
+  );
+}
+
+#home-macbook {
+  display: block;
+  width: clamp(20vw, 500px, 80vw);
+  margin: 0 auto;
+}
+
+.home-statement {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 1000;
+}
+
+#home-shop-for-btn1,
+#home-shop-for-btn2,
+#home-shop-for-btn3,
+#home-shop-for-btn4 {
+  color: white;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
