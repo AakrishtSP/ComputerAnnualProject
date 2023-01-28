@@ -1,0 +1,17 @@
+.option-card-container {
+  padding: 1em;
+  border-radius: 10%;
+  background-color: rgb(235, 239, 241);
+  min-height: 40vh;
+  width: clamp(20vw, 250px, 80vw);
+}
+
+.option-card-image {
+  max-height: 35vh;
+}
+
+.option-card-text {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: larger;
+}

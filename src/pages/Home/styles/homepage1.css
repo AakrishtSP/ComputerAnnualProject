@@ -11,22 +11,15 @@
 
 #home-macbook {
   display: block;
-  width: clamp(20vw, 500px, 80vw);
+  width: clamp(20vw, 600px, 80vw);
   margin: 0 auto;
 }
 
 .home-statement {
+  text-align: center;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
   font-weight: 1000;
-}
-
-#home-shop-for-btn1,
-#home-shop-for-btn2,
-#home-shop-for-btn3,
-#home-shop-for-btn4 {
-  color: white;
-  margin-bottom: 5px;
-  margin-left: 5px;
+  margin: 0 auto 10vh auto;
 }

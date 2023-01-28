@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Grid from "@mui/system/Unstable_Grid/Grid";
+import { Grid } from "@mui/material";
 import { Button } from "@mui/material";
 import "./styles/navbar.css";
 import hamburger from "../assets/icons/hamburger.png";

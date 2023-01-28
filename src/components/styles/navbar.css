@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 9999;
   background-color: white;
-  height: clamp(3vh, 50px, 10vh);
+  height: 50px;
   transition-duration: 1s;
 }
 
@@ -15,12 +15,12 @@
 }
 
 .navbar-hamburger {
-  width: clamp(2.5vw, 25px, 7.75vw);
+  height: 40px;
   margin: auto;
   display: block;
 }
 .navbar-logo {
-  width: clamp(2.5vw, 25px, 7.75vw);
+  height: 40px;
   margin: auto;
   display: block;
 }
