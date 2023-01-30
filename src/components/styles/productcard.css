@@ -1,0 +1,14 @@
+.product-card-image {
+  margin: auto;
+  max-width: 280px;
+}
+.product-card-name {
+  font-size: large;
+}
+.product-card-price {
+  font-size: large;
+}
+
+.product-card-description {
+  font-size: large;
+}

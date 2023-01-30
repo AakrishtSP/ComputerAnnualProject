@@ -1,4 +1,7 @@
 import React from "react";
+import ProductCard from "../../components/ProductCard";
+import macbookImg from "../../assets/images/macbook.png";
+
 import "./styles/carousel.css";
 
 function Carousel() {
@@ -7,12 +10,29 @@ function Carousel() {
       <h1 className="carousel-text">Our Latest Products</h1>
       <div className="slider">
         <div className="slides">
-          <div>Card1</div>
-          <div>Card2</div>
-          <div>Card3</div>
-          <div>Card3</div>
-          <div>Card3</div>
-          <div>Card3</div>
+          <div>
+            <ProductCard
+              img={macbookImg}
+              productName="Macbook"
+              productPrice="Rs. 80,000"
+              productDescription="Bla Bla Bla"
+            />
+          </div>
+          <div>
+            <ProductCard />
+          </div>
+          <div>
+            <ProductCard />
+          </div>
+          <div>
+            <ProductCard />
+          </div>
+          <div>
+            <ProductCard />
+          </div>
+          <div>
+            <ProductCard />
+          </div>
         </div>
       </div>
     </>

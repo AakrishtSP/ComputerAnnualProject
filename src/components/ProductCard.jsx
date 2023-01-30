@@ -12,7 +12,11 @@ function ProductCard(props) {
         direction="column"
       >
         <Grid item>
-          <img src={props.img} alt={props.productName} />
+          <img
+            className="product-card-image"
+            src={props.img}
+            alt={props.productName}
+          />
         </Grid>
         <Grid item>
           <Grid
@@ -21,15 +25,17 @@ function ProductCard(props) {
             alignItems="center"
             direction="row"
           >
-            <Grid item xs={9}>
+            <Grid item xs={9} className="product-card-name">
               {props.productName}
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={2} className="product-card-price">
               {props.productPrice}
             </Grid>
           </Grid>
         </Grid>
-        <Grid item>{props.productDescription}</Grid>
+        <Grid item className="product-card-description">
+          {props.productDescription}
+        </Grid>
       </Grid>
     </div>
   );
