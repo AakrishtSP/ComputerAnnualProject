@@ -1,0 +1,19 @@
+.product-card-container {
+  background-color: rgb(235, 239, 241);
+  min-height: 40vh;
+  width: clamp(20vw, 250px, 80vw);
+}
+
+.product-card-image {
+  max-height: 35vh;
+}
+
+.product-card-texts {
+  font-weight: 600;
+  font-size: large;
+  width: 100%;
+}
+
+.product-card-description {
+  font-size: small;
+}

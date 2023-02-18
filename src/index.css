@@ -17,8 +17,8 @@
 }
 
 a {
-  font-weight: 500;
-  color: black;
+  font-weight: inherit;
+  color: inherit;
   text-decoration: inherit;
 }
 a:hover {

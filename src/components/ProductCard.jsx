@@ -1,35 +1,40 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import "./styles/productcard.css";
+import { Link } from "react-router-dom";
 
 function ProductCard(props) {
   return (
-    <div>
+    <div className="product-card-container">
       <Grid
         container
-        justifyContent="space-around"
-        alignItems="center"
         direction="column"
+        justifyContent="space-between"
+        alignItems="center"
       >
         <Grid item>
-          <img src={props.img} alt={props.productName} />
+          <img
+            className="product-card-image"
+            src={props.img}
+            alt={props.productName}
+          />
         </Grid>
-        <Grid item>
+        <Grid item className="product-card-texts">
           <Grid
             container
-            justifyContent="space-around"
-            alignItems="center"
             direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            <Grid item xs={9}>
-              {props.productName}
+            <Grid item>
+              <Link to="">{props.productName}</Link>
             </Grid>
-            <Grid item xs={2}>
-              {props.productPrice}
-            </Grid>
+            <Grid item>{props.productPrice}</Grid>
           </Grid>
         </Grid>
-        <Grid item>{props.productDescription}</Grid>
+        <Grid item className="product-card-description">
+          {props.productDescription}
+        </Grid>
       </Grid>
     </div>
   );
