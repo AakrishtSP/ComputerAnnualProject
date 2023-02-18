@@ -1,4 +1,7 @@
 import React from "react";
+import ProductCard from "../../components/ProductCard";
+import macbookImg from "../../assets/images/macbook.png";
+
 import "./styles/carousel.css";
 import ProductCard from "../../components/ProductCard";
 

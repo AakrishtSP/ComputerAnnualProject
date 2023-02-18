@@ -18,6 +18,11 @@ function ProductCard(props) {
             src={props.img}
             alt={props.productName}
           />
+          <img
+            className="product-card-image"
+            src={props.img}
+            alt={props.productName}
+          />
         </Grid>
         <Grid item className="product-card-texts">
           <Grid
@@ -31,6 +36,9 @@ function ProductCard(props) {
             </Grid>
             <Grid item>{props.productPrice}</Grid>
           </Grid>
+        </Grid>
+        <Grid item className="product-card-description">
+          {props.productDescription}
         </Grid>
         <Grid item className="product-card-description">
           {props.productDescription}
