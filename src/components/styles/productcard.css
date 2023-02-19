@@ -5,15 +5,21 @@
 }
 
 .product-card-image {
+  display: block;
+  margin: 1em auto auto auto;
+  max-width: 90%;
   max-height: 35vh;
 }
 
 .product-card-texts {
   font-weight: 600;
   font-size: large;
-  width: 100%;
+  width: 90%;
+  margin: auto auto;
 }
 
 .product-card-description {
   font-size: small;
+  width: 95%;
+  text-align: center;
 }

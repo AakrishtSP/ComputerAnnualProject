@@ -143,26 +143,39 @@ function SignUp() {
             variant="outlined"
             onClick={() => {
               console.log(signinInfo);
-              axios
-                .post(
-                  "https://localhost/CompProjects/api/signin.php",
-                  signinInfo,
-                  {
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                  }
-                )
-                .then((response) => {
-                  response.data.error
-                    ? setApiresponse(response.data.message)
-                    : setApiresponse("Account Successfully Created");
-
-                  console.log(response.data);
-                })
-                .catch((error) => {
-                  console.log(error);
-                });
+              if (
+                signinInfo.name == "" ||
+                signinInfo.name == null ||
+                signinInfo.phone == "" ||
+                signinInfo.phone == null ||
+                signinInfo.email == "" ||
+                signinInfo.email == null ||
+                signinInfo.birth == "" ||
+                signinInfo.birth == null ||
+                signinInfo.password == "" ||
+                signinInfo.password == null
+              ) {
+                setApiresponse("Please fill all the fields above");
+              } else {
+                axios
+                  .post(
+                    "https://localhost/CompProjects/api/signin.php",
+                    signinInfo,
+                    {
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                    }
+                  )
+                  .then((response) => {
+                    response.data.error
+                      ? setApiresponse(response.data.message)
+                      : setApiresponse("Account Successfully Created");
+                  })
+                  .catch((error) => {
+                    console.log(error);
+                  });
+              }
             }}
           >
             Sign In

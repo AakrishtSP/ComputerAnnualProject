@@ -16,7 +16,6 @@ function HomePage2() {
     { product: "Macbook", location: Macbook },
     { product: "Accessories", location: watch },
   ];
-  console.log(Macbook);
   return (
     <>
       <Grid

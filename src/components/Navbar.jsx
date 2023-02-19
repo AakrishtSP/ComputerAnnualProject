@@ -8,6 +8,16 @@ import logo from "../assets/icons/logo.png";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const changeHamburger = () => {
+    setIsMenuOpen((prev) => {
+      document.getElementById("body").style.opacity = prev ? "100%" : "50%";
+      document.getElementById("navbar-burger").style.transform = prev
+        ? "translate(0, 0)"
+        : "translate(clamp(10vw, 300px, 100vw), 0)";
+
+      return !prev;
+    });
+  };
   return (
     <Grid item className="navbar">
       <Grid
@@ -27,19 +37,7 @@ function Navbar() {
               <img
                 className="navbar-hamburger"
                 src={hamburger}
-                onClick={() => {
-                  setIsMenuOpen((prev) => {
-                    document.getElementById("body").style.opacity = prev
-                      ? "100%"
-                      : "50%";
-                    document.getElementById("navbar-burger").style.transform =
-                      prev
-                        ? "translate(0, 0)"
-                        : "translate(clamp(10vw, 200px, 100vw), 0)";
-
-                    return !prev;
-                  });
-                }}
+                onClick={changeHamburger}
                 alt="hamburger"
               />
             </Grid>
@@ -83,8 +81,33 @@ function Navbar() {
           justifyContent="centre"
           alignItems="flex start"
         >
-          <Grid item>page 1</Grid>
-          <Grid item>page 2</Grid>
+          <Link
+            to="iPhone"
+            onClick={changeHamburger}
+            className="hamburger-links"
+          >
+            <Grid item>iPhone</Grid>
+          </Link>
+
+          <Link to="iPad" onClick={changeHamburger} className="hamburger-links">
+            <Grid item>iPad</Grid>
+          </Link>
+
+          <Link
+            to="Macbook"
+            onClick={changeHamburger}
+            className="hamburger-links"
+          >
+            <Grid item>Macbook</Grid>
+          </Link>
+
+          <Link
+            to="Accessories"
+            onClick={changeHamburger}
+            className="hamburger-links"
+          >
+            <Grid item>Other Accessories</Grid>
+          </Link>
         </Grid>
       </Grid>
     </Grid>

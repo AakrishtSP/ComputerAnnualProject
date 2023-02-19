@@ -2,8 +2,9 @@ import React from "react";
 import { Grid } from "@mui/material";
 import "./styles/productcard.css";
 import { Link } from "react-router-dom";
+import ImageComponent from "./ImageComponent";
 
-function ProductCard(props) {
+function ProductCard({ props }) {
   return (
     <div className="product-card-container">
       <Grid
@@ -13,16 +14,7 @@ function ProductCard(props) {
         alignItems="center"
       >
         <Grid item>
-          <img
-            className="product-card-image"
-            src={props.img}
-            alt={props.productName}
-          />
-          <img
-            className="product-card-image"
-            src={props.img}
-            alt={props.productName}
-          />
+          <ImageComponent props={props} />
         </Grid>
         <Grid item className="product-card-texts">
           <Grid
@@ -32,16 +24,13 @@ function ProductCard(props) {
             alignItems="center"
           >
             <Grid item>
-              <Link to="">{props.productName}</Link>
+              <Link to="">{props.name}</Link>
             </Grid>
-            <Grid item>{props.productPrice}</Grid>
+            <Grid item>${props.price}</Grid>
           </Grid>
         </Grid>
         <Grid item className="product-card-description">
-          {props.productDescription}
-        </Grid>
-        <Grid item className="product-card-description">
-          {props.productDescription}
+          {props.description}
         </Grid>
       </Grid>
     </div>

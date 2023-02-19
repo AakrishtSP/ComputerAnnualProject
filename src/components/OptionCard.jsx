@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Grid } from "@mui/material";
 import "./styles/OptionCard.css";
 
 function OptionCard(props) {
   return (
-    <>
+    <Link to={props.product}>
       <Grid
         item
         className="option-card-container"
@@ -29,7 +30,7 @@ function OptionCard(props) {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </Link>
   );
 }
 

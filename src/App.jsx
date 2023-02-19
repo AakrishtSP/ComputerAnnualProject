@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home/Home";
 import LogIn from "./pages/Login/LogIn";
 import SignUp from "./pages/SignUp/SignUp";
+import Products from "./pages/Products/Products";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/iPhone" element={<Products item="iPhone" />} />
+          <Route path="/iPad" element={<Products item="iPad" />} />
+          <Route path="/Macbook" element={<Products item="Macbook" />} />
+          <Route
+            path="/Accessories"
+            element={<Products item="Accessories" />}
+          />
         </Routes>
       </div>
     </div>
